@@ -8,7 +8,7 @@ The accracy of this network is 97.8%
 ```bash
     python 3.12 -m venv nn
     source nn/bin/acivate
-    pip install -r [requirements.text]
+    pip install -r [requirements.txt]
 ```
 
 # Configuration
