@@ -4,7 +4,7 @@ import os
 from utils.plot import plot_metric
 from utils.optimizer import get_optimizer
 from utils.train_utils import (train_one_epoch, evaluate)
-from models.mlp import BinaryClassifier
+from models.mlp import DigitClassifier
 from utils.dataset import get_dataloader
 
 DEVICE = torch.device(
@@ -22,9 +22,9 @@ def run_experiment(
 
     train_loader, test_loader = get_dataloader()
 
-    model = BinaryClassifier().to(DEVICE)
+    model = DigitClassifier().to(DEVICE)
 
-    criterion = nn.BCELoss()
+    criterion = nn.CrossEntropyLoss()
 
     optimizer = get_optimizer(
         optimizer_name,

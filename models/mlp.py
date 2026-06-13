@@ -1,15 +1,14 @@
 import torch
 import torch.nn as nn
 
-class BinaryClassifier(nn.Module):
+class DigitClassifier(nn.Module):
     def __init__(self):
         super().__init__()
         self.network = nn.Sequential(
             nn.Flatten(),
             nn.Linear(784, 128),
             nn.ReLU(),
-            nn.Linear(128, 1),
-            nn.Sigmoid()
+            nn.Linear(128, 10),
         )
     def forward(self, x):
         return self.network(x)

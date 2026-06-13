@@ -1,13 +1,13 @@
 import torch
-
-from models.mlp import BinaryClassifier
+import torch.nn.functional as F
+from models.mlp import DigitClassifier
 
 DEVICE = torch.device(
     "cuda" if torch.cuda.is_available()
     else "cpu"
 )
 
-model = BinaryClassifier().to(DEVICE)
+model = DigitClassifier().to(DEVICE)
 
 model.load_state_dict(
     torch.load(
@@ -20,7 +20,9 @@ model.eval()
 
 def predict(tensor):
     with torch.no_grad():
-        output = model(tensor)
-        probability_1 = output.item()
-        probability_0 = 1 - probability_1
-    return probability_0, probability_1
+        logits = model(tensor)
+
+        probabilities = F.softmax(logits, dim = 1)
+        probabilities = probabilities.squeeze().cpu().numpy()
+        predicted_digit = probabilities.argmax()
+    return predicted_digit, probabilities
