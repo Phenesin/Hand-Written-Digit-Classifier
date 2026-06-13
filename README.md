@@ -49,10 +49,10 @@ In order to see how well does the model classifies a drawn digit simply run the 
 By default it will use ADAM, so if you want to change the model used for hand writing you need to change the filename to be used in `gui/inference.py`.
 
 # Performance of Different Optimizers:
-[!train_loss](train_loss_comp.png)
-[!train_accuracy](train_acc_comp.png)
-[!test_loss](test_loss_comp.png)
-[!test_accuracy](test_acc_comp.png)
+![train_loss](train_loss_comp.png)
+![train_accuracy](train_acc_comp.png)
+![test_loss](test_loss_comp.png)
+![test_accuracy](test_acc_comp.png)
 
 
 
