@@ -58,6 +58,7 @@ By default it will use ADAM, so if you want to change the model used for hand wr
   <img src="images/test_loss_comp.png" width="48%" alt = "Testing loss">
   <img src="images/test_acc_comp.png" width="48%" alt = "Testing accuracy">
 </p>
+
 # Future Updates
 As this currently uses MLP, later it will be switched over to CNN, for better accuracy and understanding how CNNs are better in vision based systems.
 
