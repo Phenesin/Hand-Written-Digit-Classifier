@@ -119,6 +119,6 @@ adam_result = run_experiment(
 # plot_metric(sgd_result["test_accuracies"],
 #             momentum_result["test_accuracies"],
 #             adam_result["test_accuracies"],
-#             titel = "Test accuracy comparison",
+#             title = "Test accuracy comparison",
 #             y_label = "Accuracy")
 
