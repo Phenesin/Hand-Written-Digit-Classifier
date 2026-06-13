@@ -6,9 +6,9 @@ The accracy of this network is 97.8%
 # Prerequisites
 
 ```bash
-    python 3.12 -m venv nn
-    source nn/bin/acivate
-    pip install -r [requirements.txt]
+    python3.12 -m venv nn
+    source nn/bin/activate
+    pip install -r requirements.txt
 ```
 
 # Configuration
@@ -40,7 +40,7 @@ In the `train.py` all the three algortihms are written and the active one is bei
 ```
 
 # Usage
-In order to see the graphical analysis of each algorithms performance just run `train.py`, it will give you the desired comparison.  
+In order to see the graphical analysis of each algorithms performance just change the commented code to normal and run `train.py`, it will give you the desired comparison.  
 In order to see how well does the model classifies a drawn digit simply run the command:
 
 ```bash
@@ -49,15 +49,15 @@ In order to see how well does the model classifies a drawn digit simply run the 
 By default it will use ADAM, so if you want to change the model used for hand writing you need to change the filename to be used in `gui/inference.py`.
 
 # Performance of Different Optimizers:
-![train_loss](images/train_loss_comp.png)
-![train_accuracy](images/train_acc_comp.png)
-![test_loss](images/test_loss_comp.png)
-![test_accuracy](images/test_acc_comp.png)
+<p>
+  <img src="train_loss_comp.png" width="48%">
+  <img src="train_acc_comp.png" width="48%">
+</p>
 
-
-
-
-
+<p>
+  <img src="test_loss_comp.png" width="48%">
+  <img src="test_acc_comp.png" width="48%">
+</p>
 # Future Updates
 As this currently uses MLP, later it will be switched over to CNN, for better accuracy and understanding how CNNs are better in vision based systems.
 
