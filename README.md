@@ -1,6 +1,6 @@
 # MNIST 0-9 Classifier
 A simple classification of hand drawn digits from 0 to 9 classifier, implemented using Multi Layered Perceptron(MLP).
-It has an architecture of 728 -> 128 -> 10.
+It has an architecture of 784 -> 128 -> 10.
 The accracy of this network is 97.8%
 
 # Prerequisites
